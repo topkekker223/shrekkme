@@ -877,7 +877,7 @@ function gameLoop() {
             graph.textAlign = 'center';
             graph.fillStyle = '#FFFFFF';
             graph.font = 'bold 30px sans-serif';
-            graph.fillText('Game Over!', screenWidth / 2, screenHeight / 2);
+            graph.fillText('You really Suck!', screenWidth / 2, screenHeight / 2);
         }
     } else {
         graph.fillStyle = '#333333';
