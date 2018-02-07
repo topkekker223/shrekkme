@@ -185,8 +185,8 @@ function setupSocket(socket) {
         socket.emit('gotit', player);
         global.gameStart = true;
         debug('Game started at: ' + global.gameStart);
-        window.chat.addSystemLine('Connected to the game!');
-        window.chat.addSystemLine('Type <b>-help</b> for a list of commands.');
+        window.chat.addSystemLine('Accepts that this is a better server!');
+        window.chat.addSystemLine('Type <b>-mass</b> to show mass.');
         if (global.mobile) {
             document.getElementById('gameAreaWrapper').removeChild(document.getElementById('chatbox'));
         }
@@ -200,15 +200,15 @@ function setupSocket(socket) {
     });
 
     socket.on('playerDied', function (data) {
-        window.chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> was eaten.');
+        window.chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> sucks at playing.');
     });
 
     socket.on('playerDisconnect', function (data) {
-        window.chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> disconnected.');
+        window.chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> rage quit.');
     });
 
     socket.on('playerJoin', function (data) {
-        window.chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> joined.');
+        window.chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> tryna grind.');
     });
 
     socket.on('leaderboard', function (data) {
@@ -539,7 +539,7 @@ function gameLoop() {
         graph.textAlign = 'center';
         graph.fillStyle = '#FFFFFF';
         graph.font = 'bold 30px sans-serif';
-        graph.fillText('You died!', global.screenWidth / 2, global.screenHeight / 2);
+        graph.fillText('Lit Ded!', global.screenWidth / 2, global.screenHeight / 2);
     }
     else if (!global.disconnected) {
         if (global.gameStart) {
