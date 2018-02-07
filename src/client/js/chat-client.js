@@ -41,25 +41,6 @@ class ChatClient {
             self.toggleMass();
         });
 
-        this.registerCommand('continuity', 'Toggle continuity.', function () {
-            self.toggleContinuity();
-        });
-
-        this.registerCommand('roundfood', 'Toggle food drawing.', function (args) {
-            self.toggleRoundFood(args);
-        });
-
-        this.registerCommand('help', 'Information about the chat commands.', function () {
-            self.printHelp();
-        });
-
-        this.registerCommand('login', 'Login as an admin.', function (args) {
-            self.socket.emit('pass', args);
-        });
-
-        this.registerCommand('kick', 'Kick a player, for admins only.', function (args) {
-            self.socket.emit('kick', args);
-        });
         global.chatClient = this;
     }
 
@@ -121,7 +102,7 @@ class ChatClient {
                     if (commands[args[0]]) {
                         commands[args[0]].callback(args.slice(1));
                     } else {
-                        this.addSystemLine('Unrecognized Command: ' + text + ', type -help for more info.');
+                        this.addSystemLine('Screw Off Loser');
                     }
 
                 // Allows for regular messages to be sent to the server.
