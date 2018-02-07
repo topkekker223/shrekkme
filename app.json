@@ -1,6 +1,6 @@
 {
-  "name": "agar-clone",
-  "description": "A simple Agar.io clone",
+  "name": "ThiccNiccIo",
+  "description": "Gotta Steal Some Beats",
   "scripts": {
     "build": "gulp build",
     "start": "gulp run",
